@@ -1,0 +1,211 @@
+/* Estilos gerais (para telas maiores) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 40px;
+}
+
+/* Estilo para telas menores (máximo 768px) */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px 0;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
+
+/* Estilo para telas muito pequenas (máximo 480px) */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 5px 0;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+}
+
+/* Seção "Sobre Nós" */
+#sobre {
+    background-color: #f4f4f4;
+}
+
+/* Seção "Serviços" */
+#servicos ul {
+    list-style-type: disc;
+}
+
+/* Seção "Contato" */
+#contato {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Nova seção "Conheça a empresa!" e carrossel */
+#conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.texto {
+    flex: 1;
+    padding: 20px;
+    max-width: 50%; /* Defina a largura desejada */
+}
+
+.texto h1 {
+    font-size: 24px;
+}
+
+.texto p {
+    font-size: 16px;
+}
+
+.carrossel {
+    flex: 1;
+    max-width: 50%; /* Defina a largura desejada */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#carrossel {
+    flex: 1;
+    max-width: 300px; /* Defina a largura desejada */
+    margin-left: 200px; /* Adicione margem à esquerda para separá-lo do conteúdo */
+    display: flex;
+    flex-direction: column; /* Organiza os elementos na vertical */
+    overflow: hidden;
+    margin: 20px;
+}
+
+
+
+
+.imagem {
+    flex: 0 0 auto;
+    width: 100%;
+    display: none; /* Começa escondendo todas as imagens */
+}
+
+.imagem img {
+    max-width: 100%; /* Defina o tamanho máximo desejado para as imagens */
+    max-height: auto;
+}
+
+/* Estilo para a imagem visível */
+.imagem:first-child {
+    display: block;
+}
+
+/* Corrija o seletor para as imagens no carrossel - era .carrossel */
+.imagem {
+    margin: 10px;
+}
+/* Estilize as imagens no carrossel */
+#carrossel .imagem {
+    margin: 10px;
+}
+
+#carrossel .imagem img {
+    max-width: 100%; /* Defina a largura máxima desejada para as imagens */
+    height: auto;
+}
+
+/* Estilize os indicadores (bolinhas) */
+.slick-dots {
+    list-style: none;
+    text-align: center;
+    margin-top: 10px; /* Adicione margem superior para separar dos conteúdos das imagens */
+}
+
+.slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.slick-dots li button {
+    background: #ccc; /* Cor das bolinhas inativas */
+    width: 12px;
+    height: 12px;
+    border: none;
+    border-radius: 50%;
+}
+
+.slick-dots li.slick-active button {
+    background: #333; /* Cor da bolinha ativa */
+}
+
+/* Estilize as setas */
+.seta {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.seta.anterior {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+.seta.seguinte {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+

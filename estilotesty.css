@@ -1,0 +1,34 @@
+/* Estilos gerais (para telas maiores) */
+
+/* ... (seus estilos gerais aqui) */
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+#carrossel {
+    display: flex;
+    overflow: hidden;
+    margin: 20px;
+}
+
+.imagem {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.imagem img {
+    width: 100%;
+    height: auto;
+}
