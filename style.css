@@ -31,7 +31,10 @@ nav a {
 }
 
 section {
-    padding: 40px;
+    margin:auto;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 30px;
 }
 
 /* Estilo para telas menores (máximo 768px) */
@@ -85,13 +88,6 @@ section {
     color: #fff;
 }
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
 
 /* Nova seção "Conheça a empresa!" e carrossel */
 #conteudo {
@@ -131,9 +127,6 @@ footer {
     overflow: hidden;
     margin: 20px;
 }
-
-
-
 
 .imagem {
     flex: 0 0 auto;
@@ -209,3 +202,69 @@ footer {
     transform: translateY(-50%);
 }
 
+footer{
+    margin:auto;
+    margin-top: 100px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 30px;
+}
+
+.footer-top {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: flex-start;
+    width: 100%;
+}
+
+.footer-bottom {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+#footer-logo {
+    width: 100px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.btn-social {
+    margin-right: 15px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.btn-social img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-nav {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-nav h5 {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.footer-nav a {
+    display: block;
+    margin: 2px 0;
+    text-decoration: none;
+    color: black;
+}
+
+.footer-nav-section {
+    display: block;
+    padding-right: 50px;
+    align-items: center;
+}
