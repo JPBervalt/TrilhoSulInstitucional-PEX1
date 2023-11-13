@@ -9,7 +9,8 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#" onclick="carregarPagina('home.html')">Home</a></li>
+                <li><a href="#" onclick="carregarPagina('missaovisaovalores.html')">Sobre Nós</a></li>
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
@@ -17,24 +18,10 @@
     </header>
 
     <section id="conteudo">
-        <div class="texto">
-            <h1>Conheça a empresa!</h1>
-            <p>Uma breve descrição da sua empresa.</p>
-        </div>
-        <div id="carrossel">
-            <div class="imagem">
-                <img src="https://cdn.pixabay.com/photo/2023/10/12/17/56/after-the-rain-8311416_1280.jpg" alt="Imagem 1">
-            </div>
-            <div class="imagem">
-                <img src="https://cdn.pixabay.com/photo/2023/09/18/16/47/leaves-8260967_1280.jpg" alt="Imagem 2">
-            </div>
-            <div class="imagem">
-                <img src="https://media.istockphoto.com/id/1197239452/photo/fern-leaves-on-dark-background-in-jungle-dense-dark-green-fern-leaves-in-garden-at-night.jpg?s=2048x2048&w=is&k=20&c=8T7z3w0NDUM5cqApaEKZiTx6wQ3TyR1cvEJH7RnOzOo=" alt="Imagem 3">
-            </div>
-        </div>
+        <!-- Seção para carregar o conteúdo -->
+        <div id="conteudo-carregado">
 
-        <div id="indicadores"></div>
-     
+        </div>
     </section>
 
     <footer>
@@ -92,5 +79,6 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     
     <script src="scripts/script.js"></script>
+    <script>carregarPagina('home.html');</script>
 </body>
 </html>
