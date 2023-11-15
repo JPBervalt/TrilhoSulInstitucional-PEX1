@@ -9,10 +9,12 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#" onclick="carregarPagina('home.html')">Home</a></li>
-                <li><a href="#" onclick="carregarPagina('missaovisaovalores.html')">Sobre Nós</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#" id="linkHome">Home</a></li>
+                <li><a href="#" id="linkSobreNos">Sobre Nós</a></li>
+                <li><a href="#" id="linkServicos">Serviços</a></li>
+                <li><a href="#" id="linkUltimosPosts">Últimas Postagens</a></li>
+                <li><a href="#" id="linkContato">Contato</a></li>
+
             </ul>
         </nav>
     </header>
@@ -79,6 +81,15 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     
     <script src="scripts/script.js"></script>
-    <script>carregarPagina('home.html');</script>
+    <script>
+        carregarPagina('home.html')
+            .then(function() {
+                iniciarCarrossel();
+            })
+            .catch(function(error) {
+                console.error(error);
+            });
+    </script>
+
 </body>
 </html>

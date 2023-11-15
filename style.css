@@ -3,13 +3,38 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
+
 
 header {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 20px 0;
+}
+
+/* Restante do seu estilo... */
+.container{
+    text-align: center;
+}
+
+#conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; /* Ocupa o espaço disponível verticalmente */
+}
+
+footer {
+    margin: auto;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 30px;
+    text-align: center;
 }
 
 header h1 {
@@ -89,12 +114,12 @@ section {
 }
 
 
-/* Nova seção "Conheça a empresa!" e carrossel */
+/* Nova seção "Conheça a empresa!" e carrossel 
 #conteudo {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-}
+}*/
 
 .texto {
     flex: 1;
@@ -267,4 +292,137 @@ footer{
     display: block;
     padding-right: 50px;
     align-items: center;
+}
+#services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    text-align: center;
+}
+
+.service-image {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Adicione este bloco no final do seu arquivo style.css */
+
+.service-card {
+    text-align: center;
+    background-color: #f8f8f8; /* Cor de fundo para os cartões de serviço */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
+}
+
+.service-image {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-description {
+    font-size: 16px;
+}
+
+.toggle-button {
+    background-color: #3498db; /* Cor de fundo para o botão */
+    color: #fff; /* Cor do texto do botão */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.toggle-button:hover {
+    background-color: #2980b9; /* Cor de fundo ao passar o mouse */
+}
+
+/* Adicione esta regra para esconder os detalhes no início */
+.service-card.collapsed .service-description {
+    display: none;
+}
+
+#servicos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribui os cartões igualmente na linha */
+}
+
+.service-card {
+    flex: 0 0 calc(33.33% - 20px); /* Calcula a largura de cada cartão para exibir 3 por linha com margens entre eles */
+    margin-bottom: 20px; /* Adiciona uma margem inferior para separar as linhas */
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+    box-sizing: border-box; /* Garante que a largura inclua as bordas e o preenchimento */
+}
+
+.toggle-button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 20px; /* Adiciona margem superior para separar do conteúdo anterior */
+}
+
+.toggle-button:hover {
+    background-color: #2980b9;
+}
+
+/* Adicione ao seu arquivo style.css */
+
+/* Adicione ao seu arquivo style.css */
+
+/* Estilo para a grade de posts */
+#posts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center; /* Alinha a grade horizontalmente */
+    padding: 20px;
+}
+
+
+/* Estilo para cada cartão de post */
+.post-card {
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.post-card:hover {
+    background-color: #e0e0e0;
+}
+
+/* Estilo para telas menores (máximo 768px) */
+@media screen and (max-width: 768px) {
+    /* Adapte conforme necessário para telas menores */
+}
+
+/* Estilo para telas muito pequenas (máximo 480px) */
+@media screen and (max-width: 480px) {
+    /* Adapte conforme necessário para telas muito pequenas */
 }
