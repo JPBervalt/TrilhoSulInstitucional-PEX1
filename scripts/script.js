@@ -5,9 +5,9 @@ function iniciarCarrossel() {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
-        dots: true,
-        prevArrow: '<div class="seta anterior"></div>',
-        nextArrow: '<div class="seta seguinte"></div>',
+        dots: false,
+        prevArrow: '<div class="seta-anterior"></div>',
+        nextArrow: '<div class="seta-seguinte"></div>',
     });
 }
 

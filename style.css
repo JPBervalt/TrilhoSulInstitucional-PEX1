@@ -1,34 +1,173 @@
-/* Estilos gerais (para telas maiores) */
+/* Definindo variáveis de cores */
+:root {
+    --cor-primaria: #ec3c21;
+    --cor-secundaria: #f69c75;
+    --cor-fundo: rgb(251, 241, 236);
+    --cor-texto: rgb(74, 92, 112);
+    --cor-botao: #ec3c21;
+    --cor-botao-hover: rgb(181, 54, 34);
+}
+
+/* Estilos Gerais */
 body {
+    background-color: var(--cor-fundo);
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     display: flex;
+    height: 100%;
     min-height: 100vh;
+    max-width: 800px;
     flex-direction: column;
 }
 
-
+/* Cabeçalho */
 header {
-    background-color: #333;
-    color: #fff;
+    color: var(--cor-texto);
     text-align: center;
-    padding: 20px 0;
+    align-items: center;
+    padding: 10px 0;
+    margin: 0;
+}
+header h1 {
+    font-size: 2rem;
+    color: var(--cor-texto);
+}
+img#logo{
+    width: auto;
+    position: relative;
+    height: 35px;
+    z-index: 1;
+    padding-right: 10px ;
 }
 
-/* Restante do seu estilo... */
-.container{
-    text-align: center;
+/* Navegação */
+nav ul {
+    align-items: center;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+nav a {
+    color: var(--cor-texto);
+    text-decoration: none;
+}
+nav a:hover{
+    color:black;
+    text-decoration: underline;
 }
 
-#conteudo {
+/* Conteúdo Principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    max-height: 200vh;
+}
+.container.h1 {
+    color: var(--cor-texto);
+}
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    background-size: cover;
+}
+.texto {
+    width: 40%;
+    flex-basis: 40%;
+    max-width: 40%;
+}
+.texto h1 {
+    color: var(--cor-texto);
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    text-align: left;
+    margin-bottom: 25px;
+}
+.texto p {
+    color: var(--cor-texto);
+    margin-bottom: 25px;
+    justify-content: left;
+}
+button {
+    background-color: var(--cor-botao);
+    color: whitesmoke;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: var(--cor-botao-hover);
+}
+
+/* Seções Específicas */
+#sobre {
+    background-color: var(--cor-fundo);
+}
+#servicos ul {
+    list-style-type: disc;
+}
+#contato {
+    background-color: var(--cor-fundo);
+}
+.photo-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 10px;
+    text-align: center;
+    width: 150px;
+    height: 100%;
+}
+.photos {
+    gap: 15%;
+    display: flex;
     justify-content: center;
-    flex-grow: 1; /* Ocupa o espaço disponível verticalmente */
+    align-items: center;
+    text-align: center;
+}
+.photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.photo-description {
+    margin-top: 5px;
+}
+.contact-form {
+    background: var(--cor-fundo);
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+input[type="submit"] {
+    padding: 10px 20px;
+    background: var(--cor-botao);
+    color: whitesmoke;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+input[type="submit"]:hover {
+    background: var(--cor-botao-hover);
 }
 
+/* Estilos do Rodapé */
 footer {
     margin: auto;
     max-width: 1200px;
@@ -36,227 +175,26 @@ footer {
     padding: 0 30px;
     text-align: center;
 }
-
-header h1 {
-    font-size: 36px;
-}
-
-nav ul {
-    list-style-type: none;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-}
-
-section {
-    margin:auto;
-    max-width: 1200px;
-    width: 100%;
-    padding: 0 30px;
-}
-
-/* Estilo para telas menores (máximo 768px) */
-@media screen and (max-width: 768px) {
-    header {
-        padding: 10px 0;
-    }
-
-    header h1 {
-        font-size: 24px;
-    }
-
-    nav ul {
-        text-align: center;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    section {
-        padding: 20px;
-    }
-}
-
-/* Estilo para telas muito pequenas (máximo 480px) */
-@media screen and (max-width: 480px) {
-    header {
-        padding: 5px 0;
-    }
-
-    header h1 {
-        font-size: 20px;
-    }
-}
-
-/* Seção "Sobre Nós" */
-#sobre {
-    background-color: #f4f4f4;
-}
-
-/* Seção "Serviços" */
-#servicos ul {
-    list-style-type: disc;
-}
-
-/* Seção "Contato" */
-#contato {
-    background-color: #333;
-    color: #fff;
-}
-
-
-/* Nova seção "Conheça a empresa!" e carrossel 
-#conteudo {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}*/
-
-.texto {
-    flex: 1;
-    padding: 20px;
-    max-width: 50%; /* Defina a largura desejada */
-}
-
-.texto h1 {
-    font-size: 24px;
-}
-
-.texto p {
-    font-size: 16px;
-}
-
-.carrossel {
-    flex: 1;
-    max-width: 50%; /* Defina a largura desejada */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#carrossel {
-    flex: 1;
-    max-width: 300px; /* Defina a largura desejada */
-    margin-left: 200px; /* Adicione margem à esquerda para separá-lo do conteúdo */
-    display: flex;
-    flex-direction: column; /* Organiza os elementos na vertical */
-    overflow: hidden;
-    margin: 20px;
-}
-
-.imagem {
-    flex: 0 0 auto;
-    width: 100%;
-    display: none; /* Começa escondendo todas as imagens */
-}
-
-.imagem img {
-    max-width: 100%; /* Defina o tamanho máximo desejado para as imagens */
-    max-height: auto;
-}
-
-/* Estilo para a imagem visível */
-.imagem:first-child {
-    display: block;
-}
-
-/* Corrija o seletor para as imagens no carrossel - era .carrossel */
-.imagem {
-    margin: 10px;
-}
-/* Estilize as imagens no carrossel */
-#carrossel .imagem {
-    margin: 10px;
-}
-
-#carrossel .imagem img {
-    max-width: 100%; /* Defina a largura máxima desejada para as imagens */
-    height: auto;
-}
-
-/* Estilize os indicadores (bolinhas) */
-.slick-dots {
-    list-style: none;
-    text-align: center;
-    margin-top: 10px; /* Adicione margem superior para separar dos conteúdos das imagens */
-}
-
-.slick-dots li {
-    display: inline-block;
-    margin: 0 5px;
-}
-
-.slick-dots li button {
-    background: #ccc; /* Cor das bolinhas inativas */
-    width: 12px;
-    height: 12px;
-    border: none;
-    border-radius: 50%;
-}
-
-.slick-dots li.slick-active button {
-    background: #333; /* Cor da bolinha ativa */
-}
-
-/* Estilize as setas */
-.seta {
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.seta.anterior {
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-}
-
-.seta.seguinte {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-}
-
-footer{
-    margin:auto;
-    margin-top: 100px;
-    max-width: 1200px;
-    width: 100%;
-    padding: 0 30px;
-}
-
 .footer-top {
-    background-color: white;
+    background-color: var(--cor-fundo);
     padding: 10px;
+    margin-top: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between; 
     align-items: flex-start;
     width: 100%;
 }
-
 .footer-bottom {
     display: flex; 
     flex-direction: column;
     align-items: center;
 }
-
 #footer-logo {
     width: 100px;
     margin-bottom: 20px;
     display: block;
 }
-
 .btn-social {
     margin-right: 15px;
     background: none;
@@ -264,165 +202,162 @@ footer{
     padding: 0;
     cursor: pointer;
 }
-
 .btn-social img {
     width: 30px;
     height: 30px;
 }
-
 .footer-nav {
     display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
 }
-
 .footer-nav h5 {
     font-weight: bold;
     margin-bottom: 5px;
 }
-
 .footer-nav a {
     display: block;
     margin: 2px 0;
     text-decoration: none;
     color: black;
 }
-
 .footer-nav-section {
     display: block;
     padding-right: 50px;
     align-items: center;
 }
-#services-container {
+
+/* Estilos de Serviços e Posts */
+#services-container, #servicos-container, #posts-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
+    justify-content: center;
+    padding: 20px;
 }
-
-.service-card {
+.service-card, .post-card {
     text-align: center;
-}
-
-.service-image {
-    width: 100%;
-    max-width: 200px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-/* Adicione este bloco no final do seu arquivo style.css */
-
-.service-card {
-    text-align: center;
-    background-color: #f8f8f8; /* Cor de fundo para os cartões de serviço */
+    background-color: var(--cor-fundo);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease-in-out;
 }
-
-.service-card:hover {
-    background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
+.service-card:hover, .post-card:hover {
+    background-color: var(--cor-fundo);
 }
-
 .service-image {
-    width: 100%;
-    max-width: 200px;
-    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    object-fit: fill;
     margin-bottom: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 .service-description {
     font-size: 16px;
 }
-
 .toggle-button {
-    background-color: #3498db; /* Cor de fundo para o botão */
-    color: #fff; /* Cor do texto do botão */
+    background-color: var(--cor-botao);
+    color: whitesmoke;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.5s;
 }
-
+.toggle-button.contato{
+    margin: 0 auto;
+    text-align: center;
+    width: 150px;
+    height: auto;
+    object-fit: fill;
+}
 .toggle-button:hover {
-    background-color: #2980b9; /* Cor de fundo ao passar o mouse */
+    background-color: var(--cor-botao-hover);
 }
-
-/* Adicione esta regra para esconder os detalhes no início */
 .service-card.collapsed .service-description {
     display: none;
 }
 
-#servicos-container {
+/* Estilos do Carrossel */
+.texto, .carrossel {
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+}
+#carrossel {
+    flex: 1;
+    width: 50%;
+    max-width: 500px;
+    margin-left: 50px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Distribui os cartões igualmente na linha */
+    flex-direction: column;
+    overflow: hidden;
+    margin: 10px;
 }
-
-.service-card {
-    flex: 0 0 calc(33.33% - 20px); /* Calcula a largura de cada cartão para exibir 3 por linha com margens entre eles */
-    margin-bottom: 20px; /* Adiciona uma margem inferior para separar as linhas */
-    text-align: center;
-    background-color: #f8f8f8;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease-in-out;
-    box-sizing: border-box; /* Garante que a largura inclua as bordas e o preenchimento */
+.imagem {
+    flex: 0 0 auto;
+    width: 100%;
+    display: block; /* Começa escondendo todas as imagens */
 }
-
-.toggle-button {
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+.imagem img {
+    max-width: 100%;
+    max-height: auto;
+}
+.imagem:first-child {
+    display: block;
+}
+#carrossel .imagem {
+    margin: 10px;
+}
+#carrossel .imagem img {
+    max-width: 100%;
+    height: auto;
+}
+/* .seta {
+    font-size: 12PX;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    margin-top: 20px; /* Adiciona margem superior para separar do conteúdo anterior */
 }
-
-.toggle-button:hover {
-    background-color: #2980b9;
+.seta-anterior {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
 }
+.seta-seguinte {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+} */
 
-/* Adicione ao seu arquivo style.css */
-
-/* Adicione ao seu arquivo style.css */
-
-/* Estilo para a grade de posts */
-#posts-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    justify-content: center; /* Alinha a grade horizontalmente */
-    padding: 20px;
-}
-
-
-/* Estilo para cada cartão de post */
-.post-card {
-    text-align: center;
-    background-color: #f8f8f8;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease-in-out;
-}
-
-.post-card:hover {
-    background-color: #e0e0e0;
-}
-
-/* Estilo para telas menores (máximo 768px) */
+/* Media Queries para Telas Menores */
 @media screen and (max-width: 768px) {
-    /* Adapte conforme necessário para telas menores */
+    /* Estilos adaptativos para telas até 768px */
+    header {
+        padding: 10px 0;
+    }
+    header h1 {
+        font-size: 24px;
+    }
+    nav ul {
+        text-align: center;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    section {
+        padding: 20px;
+    }
 }
 
-/* Estilo para telas muito pequenas (máximo 480px) */
 @media screen and (max-width: 480px) {
-    /* Adapte conforme necessário para telas muito pequenas */
+    /* Estilos adaptativos para telas até 480px */
+    header {
+        padding: 5px 0;
+    }
+    header h1 {
+        font-size: 20px;
+    }
 }
