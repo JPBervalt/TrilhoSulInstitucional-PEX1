@@ -83,9 +83,9 @@ if (document.getElementById("linkServicos")) {
 
 // dados dos cartoes
 const servicos = [
-    { imagem: 'https://cdn.pixabay.com/photo/2023/10/12/17/56/after-the-rain-8311416_1280.jpg', descricao: 'Descrição do Serviço 1' },
-    { imagem: 'https://cdn.pixabay.com/photo/2023/09/18/16/47/leaves-8260967_1280.jpg', descricao: 'Descrição do Serviço 2' },
-    { imagem: 'https://media.istockphoto.com/id/1197239452/photo/fern-leaves-on-dark-background-in-jungle-dense-dark-green-fern-leaves-in-garden-at-night.jpg?s=2048x2048&w=is&k=20&c=8T7z3w0NDUM5cqApaEKZiTx6wQ3TyR1cvEJH7RnOzOo=', descricao: 'Descrição do Serviço 3' },
+    { imagem: 'img/produtos/vedaportasimpermeavel90cm1636052286.jpeg', descricao: 'VEDA PORTAS IMPERMEÁVEL 90CM PratCasa Veda portas ajustável de alta qualidade Para portas de até 90cm' },
+    { imagem: 'img/produtos/mehndicafe1617994627.jpeg', descricao: 'Blackout Laminado em duas camadas sendo uma estampada e a outra prata. Reduz a incidência do calor e veda parcialmente a passagem de luz. É um produto durável e de fácil aplicação que possui um bom caimento. Produto impermeável, fácil de limpar. '},
+    { imagem: 'img/produtos/kitvarao19mm19mmcromado1623961435.jpeg', descricao: 'Kit Varão de alta qualidade - Revestido em cores: Cromado - Modelos: 19mm - 19/19mm - 28mm e 19/28mm'},
 
 ];
 
@@ -158,9 +158,9 @@ function carregarUltimosPosts() {
 
 // Dados de exemplo para posts
 const ultimosPosts = [
-    { titulo: 'Título do Post 1', conteudo: 'Conteúdo do Post 1' },
-    { titulo: 'Título do Post 2', conteudo: 'Conteúdo do Post 2' },
-    { titulo: 'Título do Post 3', conteudo: 'Conteúdo do Post 3' },
+    { titulo: '', imagem: 'img/posts/Post1TrilhoSul.PNG', url: 'https://www.instagram.com/p/CaBZzmpLMl5/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=='},
+    { titulo: '', imagem: 'img/posts/PostTrilhoSul2.PNG', url: 'https://www.instagram.com/p/CUxgIITrc00/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=='},
+    { titulo: '', imagem: 'img/posts/PostTrilhoSul3.PNG', url: 'https://www.instagram.com/p/CUDZDHFLVxE/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=='},
 ];
 
 // Função para gerar cartões de postagens
@@ -174,6 +174,8 @@ function gerarCartoesPosts() {
         return;
     }
 
+
+    
     postsContainer.innerHTML = '';
 
     ultimosPosts.forEach((post, index) => {
@@ -182,12 +184,22 @@ function gerarCartoesPosts() {
 
         const titulo = document.createElement('h2');
         titulo.textContent = post.titulo;
+        
+        const imagem = document.createElement('img');
+        imagem.src = post.imagem;
+        imagem.alt = 'Imagem do post';
+        imagem.className = 'service-image';
 
-        const conteudo = document.createElement('p');
-        conteudo.textContent = post.conteudo;
+        const botaoDetalhes = document.createElement('button');
+        botaoDetalhes.className = 'btn btn-primary toggle-button';
+        botaoDetalhes.textContent = 'Ver no Instagram';
+        botaoDetalhes.addEventListener('click', () => abrirURL(post.url));
+
+        
 
         cartaoDiv.appendChild(titulo);
-        cartaoDiv.appendChild(conteudo);
+        cartaoDiv.appendChild(imagem);
+        cartaoDiv.appendChild(botaoDetalhes);
 
         postsContainer.appendChild(cartaoDiv);
 
@@ -203,3 +215,10 @@ document.addEventListener('DOMContentLoaded', function () {
         gerarCartoesPosts();
     }
 });
+
+function abrirURL(url) {
+    window.open(url, '_blank');
+}
+
+
+
