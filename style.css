@@ -298,7 +298,7 @@ footer {
 .imagem {
     flex: 0 0 auto;
     width: 100%;
-    display: block; /* Começa escondendo todas as imagens */
+    display: block; 
 }
 .imagem img {
     max-width: 100%;
@@ -333,7 +333,6 @@ footer {
 
 /* Media Queries para Telas Menores */
 @media screen and (max-width: 768px) {
-    /* Estilos adaptativos para telas até 768px */
     header {
         padding: 10px 0;
     }
@@ -353,7 +352,6 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
-    /* Estilos adaptativos para telas até 480px */
     header {
         padding: 5px 0;
     }
